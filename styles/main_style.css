@@ -186,8 +186,8 @@
 /* About */
 .about .content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 
@@ -211,6 +211,7 @@
 
 .card {
     padding: 20px;
+    max-width: 456px;
     border-radius: 4px;
     background-color: var(--color-light);
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
@@ -223,6 +224,75 @@
 .card .description {
     line-height: 150%;
     text-align: justify;
+}
+
+/* Sale */
+.sale .content {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sale .title {
+    margin-bottom: 30px;
+}
+
+.count {
+    color: var(--color-primary);
+    font-size: var(--size-heading-lg);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.count-text {
+    font-family: var(--font-text);
+}
+
+.sale .main-content {
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.progress-bar .step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 100px;
+    aspect-ratio: 1;
+    color: var(--color-primary);
+    font-size: var(--size-text-xl);
+    font-weight: 700;
+    transition: all var(--trasition-fast);
+}
+
+.progress-bar .step-number.active {
+	background-color: var(--color-primary);
+	color: var(--color-light);
+	transform: scale(1);
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 0;
+    width: 4px;
+    background-color: var(--color-primary);
+    transform: translateX(-50%);
+    transition: height 0.2s ease;
+    z-index: -1;
 }
 
 /* Hover */
@@ -245,8 +315,13 @@
 	}
 }
 
+/* Mobile */
 @media only screen and (max-width: 500px) {
     /* Common */
+    .section-indent {
+        margin-bottom: 80px;
+    }
+
     .container {
         margin: 0 10px;
     }
@@ -308,12 +383,16 @@
     }
 
     /* About */
-	.about .role {
+    .about .role {
         text-align: center;
     }
-	
+
     .about .main-content {
         flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
     }
 }
 
@@ -336,4 +415,3 @@
 		color: var(--color-light);
 	}
 }
-
