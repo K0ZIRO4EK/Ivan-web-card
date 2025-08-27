@@ -1,7 +1,7 @@
 window.addEventListener('scroll', function() {
     
-    const progressLine = document.querySelector('.progress-bar-line');
-    const steps = document.querySelectorAll('.progress-bar-step');
+    const progressLine = document.querySelector('.line');
+    const steps = document.querySelectorAll('.step-number');
     const section = document.querySelector('.sale');
     const firstStep = steps[0];
     const lastStep = steps[steps.length - 1];
