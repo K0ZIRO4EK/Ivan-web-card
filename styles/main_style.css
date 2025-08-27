@@ -308,6 +308,10 @@
     }
 
     /* About */
+	.about .role {
+        text-align: center;
+    }
+	
     .about .main-content {
         flex-direction: column;
     }
@@ -332,3 +336,4 @@
 		color: var(--color-light);
 	}
 }
+
