@@ -245,7 +245,7 @@
 	}
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 500px) {
     /* Common */
     .container {
         margin: 0 10px;
