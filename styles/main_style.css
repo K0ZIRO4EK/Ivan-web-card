@@ -295,6 +295,48 @@
     z-index: -1;
 }
 
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl);
+}
+
+.step {
+    position: relative;
+    display: flex;
+	align-items: center;
+	height: 100px;
+}
+
+.step .description {
+	position: absolute;
+	width: 380px;
+}
+
+.step .description-left {
+	left: 20px;
+}
+
+.step .description-right {
+	right: 20px;
+	text-align: end;
+}
+
+.shape {
+	position: absolute;
+	top: -11px;
+    z-index: -1;
+}
+
+.shape-left {
+	left: -20px;
+}
+
+.shape-right {
+	right: -20px;
+	float: right;
+}
+
 /* Hover */
 @media (hover: hover) {
 	/* Common */
@@ -415,3 +457,4 @@
 		color: var(--color-light);
 	}
 }
+
