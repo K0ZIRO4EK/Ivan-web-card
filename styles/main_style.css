@@ -41,13 +41,15 @@
     --size-heading-sm: 24px;
 
     /* Sizes text */
-    --size-text-xl: 60px;
+    --size-text-xxl: 60px;
+    --size-text-xl: 50px;
     --size-text-lg: 40px;
     --size-text-md: 26px;
     --size-text-sm: 20px;
     --size-text-xs: 16px;
 
     /* Gaps */
+    --gap-xl: 60px;
     --gap-lg: 24px;
     --gap-md: 20px;
     --gap-sm: 16px;
@@ -258,13 +260,13 @@
     transform: translateX(-50%);
 }
 
-.progress-bar .step-list {
+.step-list {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: var(--gap-xl);
 }
 
-.progress-bar .step-number {
+.step-number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,12 +274,12 @@
     height: 100px;
     aspect-ratio: 1;
     color: var(--color-primary);
-    font-size: var(--size-text-xl);
+    font-size: var(--size-text-xxl);
     font-weight: 700;
     transition: all var(--trasition-fast);
 }
 
-.progress-bar .step-number.active {
+.step-number.active {
 	background-color: var(--color-primary);
 	color: var(--color-light);
 	transform: scale(1);
@@ -306,6 +308,10 @@
     display: flex;
 	align-items: center;
 	height: 100px;
+}
+
+.bracket {
+    display: none;
 }
 
 .step .description {
@@ -436,6 +442,68 @@
     .card {
         max-width: 100%;
     }
+
+    /* Sale */
+    .sale .main-content {
+        display: flex;
+        gap: var(--gap-sm);
+    }
+
+    .progress-bar {
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .step-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xl);
+    }
+
+    .step-number {
+        height: 86px;
+        aspect-ratio: 1;
+        font-size: var(--size-text-xl);
+    }
+
+    .steps {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xl);
+    }
+
+    .step {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: var(--gap-sm);
+        height: 100%;
+    }
+
+    .bracket {
+        display: block;
+    }
+
+    .step .description {
+        position: static;
+        width: 100%;
+        word-break: break-all;
+    }
+
+    .step .description-left {
+        left: 0;
+    }
+
+    .step .description-right {
+        right: 0;
+        text-align: start;
+    }
+
+    .shape {
+        display: none;
+    }
 }
 
 /* Active */
@@ -457,4 +525,3 @@
 		color: var(--color-light);
 	}
 }
-
