@@ -370,7 +370,7 @@
 	border-radius: 4px;
 }
 
-/* Hover */
+/* Mouse */
 @media (hover: hover) {
 	/* Common */
 	.btn:hover {
@@ -529,22 +529,20 @@
     }
 }
 
-/* Active */
-@media (hover: none) and (pointer: coarse) {
-	/* Common */
-	.btn:active {
-		background-color: var(--color-light);
-		color: var(--color-primary);
-	}
+/* Touch screen */
+/* Common */
+.btn.touch-active {
+	background-color: var(--color-light);
+	color: var(--color-primary);
+}
 
-	/* Header */
-	.btn-phone:active {
-		background-color: var(--color-primary);
-		color: var(--color-light);
-	}
+/* Header */
+.btn-phone.touch-active {
+	background-color: var(--color-primary);
+	color: var(--color-light);
+}
 
-	.btn-messenger:active {
-		background-color: var(--color-secondary);
-		color: var(--color-light);
-	}
+.btn-messenger.touch-active {
+	background-color: var(--color-secondary);
+	color: var(--color-light);
 }
