@@ -229,6 +229,12 @@
 }
 
 /* Sale */
+.sale {
+    padding-bottom: 80px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
 .sale .content {
     text-align: center;
     margin-bottom: 80px;
@@ -343,6 +349,27 @@
 	float: right;
 }
 
+/* Why */
+.why .container {
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+
+.why .title {
+    margin-bottom: 30px;
+}
+
+.why .description {
+    max-width: 808px;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.why .img {
+	border-radius: 4px;
+}
+
 /* Hover */
 @media (hover: hover) {
 	/* Common */
@@ -425,6 +452,10 @@
         justify-content: center;
     }
 
+    .skill:nth-child(2) {
+        margin-bottom: 10px;
+    }
+
     .skill .description {
         max-width: 230px;
         font-size: var(--size-text-sm);
@@ -444,6 +475,10 @@
     }
 
     /* Sale */
+    .sale {
+        padding-bottom: 0;
+    }
+
     .sale .main-content {
         display: flex;
         gap: var(--gap-sm);
@@ -451,15 +486,7 @@
 
     .progress-bar {
         position: static;
-        top: 0;
-        left: 0;
         transform: translateX(0);
-    }
-
-    .step-list {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-xl);
     }
 
     .step-number {
@@ -468,16 +495,8 @@
         font-size: var(--size-text-xl);
     }
 
-    .steps {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-xl);
-    }
-
     .step {
         position: static;
-        display: flex;
-        align-items: center;
         gap: var(--gap-sm);
         height: 100%;
     }
@@ -489,25 +508,29 @@
     .step .description {
         position: static;
         width: 100%;
-        word-break: break-all;
-    }
-
-    .step .description-left {
-        left: 0;
     }
 
     .step .description-right {
-        right: 0;
         text-align: start;
     }
 
     .shape {
         display: none;
     }
+
+    /* Why */
+    .why .container {
+        flex-direction: column;
+        gap: var(--gap-md);
+    }
+
+    .why .img {
+        width: 100%;
+    }
 }
 
 /* Active */
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
 	/* Common */
 	.btn:active {
 		background-color: var(--color-light);
